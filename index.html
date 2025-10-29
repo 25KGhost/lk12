@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Studio</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Premium Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
+</head>
+<body>
+    <svg id="svg"></svg>
+    
+    <!-- HUD Overlay Elements -->
+    <div class="hud-overlay">
+        <div class="scan-line"></div>
+        <div class="grid-overlay"></div>
+        <div class="corner-markers">
+            <div class="corner top-left"></div>
+            <div class="corner top-right"></div>
+            <div class="corner bottom-left"></div>
+            <div class="corner bottom-right"></div>
+        </div>
+    </div>
+    
+    <main>
+        <section id="home" class="full-viewport hero">
+    <!-- Premium Grid Background -->
+    <canvas id="grid-canvas"></canvas>
+    
+    <!-- Enhanced 3D Holographic Elements -->
+    <div id="hologram-container" class="hologram-sharp"></div>
+    
+    <!-- Hero Content -->
+     <div class="hero-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                    </div>
+                    <div class="terminal-title">LUCIENT COMMAND INTERFACE</div>
+                </div>
+                
+                <div class="terminal-content">
+                    <div class="command-line">
+                        <span class="prompt">></span>
+                        <span class="command">INITIALIZE_DISPLAY</span>
+                    </div>
+                    
+                    <h1 class="hero-headline">
+                        <span class="line-1">PRECISION.</span>
+                        <span class="line-2">EXECUTION.</span>
+                        <span class="line-3">LEGACY.</span>
+                    </h1>
+                    
+                    <div class="hero-subtext">
+                        <p>LUCIENT CREATIVE BUILDS ELITE DIGITAL EXPERIENCES,</p>
+                        <p>CRAFTED WITH PRECISION, DEPLOYED WITH INTENT.</p>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">47+</span>
+                            <span class="stat-label">MISSIONS</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">89%</span>
+                            <span class="stat-label">SUCCESS RATE</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3.2x</span>
+                            <span class="stat-label">ROI MULTIPLIER</span>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button tactical">
+                        <span class="button-text">BEGIN OPERATION</span>
+                        <span class="button-glow"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Status Indicators -->
+            <div class="status-indicators">
+                <div class="indicator">
+                    <span class="indicator-label">SYSTEM STATUS</span>
+                    <div class="indicator-bar">
+                        <div class="indicator-fill operational"></div>
+                    </div>
+                </div>
+                <div class="indicator">
+                    <span class="indicator-label">READINESS LEVEL</span>
+                    <div class="indicator-bar">
+                        <div class="indicator-fill optimal"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+       <section id="work" class="work-section">
+    <h2 class="section-title scroll-element">Crafting Digital Excellence</h2>
+    <p class="section-subtitle scroll-element stagger-delay-1">Where visionary design meets technical precision to create experiences that drive measurable business outcomes</p>
+    
+    <div class="work-grid">
+        <div class="work-item scroll-element">
+            <div class="work-preview">
+                <div class="preview-frame" data-src="assets/work1.jpg"></div>
+                <div class="work-overlay">
+                    <div class="work-logo">
+                        <div class="logo-placeholder">LC</div>
+                    </div>
+                    <div class="work-secondary" data-src="assets/work1-alt.jpg"></div>
+                    <div class="work-info">
+                        <h3>Premium E-commerce Experience</h3>
+                        <p>Transforming digital retail with conversion-optimized design that elevates brand perception while driving unprecedented revenue growth.</p>
+                        <span class="result-metric">+214% Revenue Growth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="work-item scroll-element stagger-delay-1">
+            <div class="work-preview">
+                <div class="preview-frame" data-src="assets/work2.jpg"></div>
+                <div class="work-overlay">
+                    <div class="work-logo">
+                        <div class="logo-placeholder">LC</div>
+                    </div>
+                    <div class="work-secondary" data-src="assets/work2-alt.jpg"></div>
+                    <div class="work-info">
+                        <h3>Financial Intelligence Platform</h3>
+                        <p>Democratizing complex financial data through intuitive interfaces that empower strategic decision-making at every level.</p>
+                        <span class="result-metric">-68% Decision Time</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="work-item scroll-element stagger-delay-2">
+            <div class="work-preview">
+                <div class="preview-frame" data-src="assets/work3.jpg"></div>
+                <div class="work-overlay">
+                    <div class="work-logo">
+                        <div class="logo-placeholder">LC</div>
+                    </div>
+                    <div class="work-secondary" data-src="assets/work3-alt.jpg"></div>
+                    <div class="work-info">
+                        <h3>Wellness Technology Ecosystem</h3>
+                        <p>Creating holistic digital experiences that seamlessly integrate into users' wellness journeys, driving engagement and positive outcomes.</p>
+                        <span class="result-metric">4.9★ User Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <div class="work-process scroll-element stagger-delay-3">
+        <h3>THE LUCIENT FRAMEWORK — Where Vision Becomes Precision</h3>
+        <div class="process-steps">
+            <div class="step scroll-element">
+                <div class="step-number">01</div>
+                <h4>The Extraction</h4>
+                <p>We extract clarity from chaos. Every collaboration starts with dissecting your brand's intent — uncovering what truly moves your audience, what competitors overlook, and what will make your presence unmistakable.</p>
+                <div class="step-arrow">→ Insight, not assumption.</div>
+            </div>
+            <div class="step scroll-element stagger-delay-1">
+                <div class="step-number">02</div>
+                <h4>The Composition</h4>
+                <p>We orchestrate visuals that speak before words do. Our design philosophy fuses structure and storytelling — translating strategy into an interface that commands attention, communicates status, and converts emotion into trust.</p>
+                <div class="step-arrow">→ Design that thinks.</div>
+            </div>
+            <div class="step scroll-element stagger-delay-2">
+                <div class="step-number">03</div>
+                <h4>The Forging</h4>
+                <p>We don't "develop." We forge digital armor. Your site is engineered for speed, security, and scalability — built like a machine designed for longevity, not trends. Every element is optimized, every pixel has a purpose.</p>
+                <div class="step-arrow">→ Precision by design.</div>
+            </div>
+            <div class="step scroll-element stagger-delay-3">
+                <div class="step-number">04</div>
+                <h4>The Ascension</h4>
+                <p>Once launched, evolution begins. We analyze behavior, refine interactions, and adapt your presence to keep you ahead — because the brands that evolve fastest, win longest.</p>
+                <div class="step-arrow">→ Growth without hesitation.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section">
+            <div class="section-bg-overlay"></div>
+            
+             <div class="scroll-indicator">
+        <div class="scroll-text">Scroll</div>
+        <div class="scroll-line"></div>
+    </div>
+
+    <main class="ribbon-container">
+        <!-- Project 1: Aurora Digital Platform -->
+        <section class="ribbon-segment" id="aurora">
+            <!-- Panel 1: Hero -->
+            <div class="panel panel--hero">
+                <div class="panel-content">
+                    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+                        <div class="hero-overlay">
+                            <h1 class="project-title">Aurora</h1>
+                            <p class="project-client">Digital Platform · Global Finance Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel 2: Details -->
+            <div class="panel panel--details">
+                <div class="panel-content">
+                    <div class="details-container">
+                        <div class="details-image" style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="info-rectangle">
+                            <h3 class="info-title">Project Details</h3>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">6 Months</div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Client</div>
+                                <div class="info-value">Global Finance Corp</div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Core Features</div>
+                                <div class="info-value">SEO-First Architecture, Personalization Engine, Real-time Analytics</div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Technologies</div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Next.js</span>
+                                    <span class="tech-tag">Headless CMS</span>
+                                    <span class="tech-tag">GraphQL</span>
+                                    <span class="tech-tag">Vercel</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel 3: Results -->
+            <div class="panel panel--results">
+                <div class="panel-content">
+                    <div class="results-container">
+                        <h2 class="results-title">Performance Metrics</h2>
+                        
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Conversion Rate</div>
+                                    <div class="metric-value">+47%</div>
+                                </div>
+                                <p>Increase in user conversions after platform implementation</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Page Load Time</div>
+                                    <div class="metric-value">-62%</div>
+                                </div>
+                                <p>Reduction in average page load time across all devices</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">User Engagement</div>
+                                    <div class="metric-value">+33%</div>
+                                </div>
+                                <p>Increase in time spent on platform and interaction depth</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Mobile Traffic</div>
+                                    <div class="metric-value">+28%</div>
+                                </div>
+                                <p>Growth in mobile user acquisition and retention</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 65%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Project 2: Nova E-commerce UI -->
+        <section class="ribbon-segment" id="nova">
+            <!-- Panel 1: Hero -->
+            <div class="panel panel--hero">
+                <div class="panel-content">
+                    <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                        <div class="hero-overlay">
+                            <h1 class="project-title">Nova</h1>
+                            <p class="project-client">E-commerce UI · Style & Co</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel 2: Details -->
+            <div class="panel panel--details">
+                <div class="panel-content">
+                    <div class="details-container">
+                        <div class="details-image" style="background-image: url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')"></div>
+                        <div class="info-rectangle">
+                            <h3 class="info-title">Project Details</h3>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Duration</div>
+                                <div class="info-value">4 Months</div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Client</div>
+                                <div class="info-value">Style & Co</div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Core Features</div>
+                                <div class="info-value">AR Product Previews, One-Click Checkout, Personalized Recommendations</div>
+                            </div>
+                            
+                            <div class="info-item">
+                                <div class="info-label">Technologies</div>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Shopify</span>
+                                    <span class="tech-tag">Three.js</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Framer Motion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Panel 3: Results -->
+            <div class="panel panel--results">
+                <div class="panel-content">
+                    <div class="results-container">
+                        <h2 class="results-title">Performance Metrics</h2>
+                        
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Sales Growth</div>
+                                    <div class="metric-value">+58%</div>
+                                </div>
+                                <p>Increase in overall sales within first quarter post-launch</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Cart Abandonment</div>
+                                    <div class="metric-value">-41%</div>
+                                </div>
+                                <p>Reduction in shopping cart abandonment rate</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Mobile Conversion</div>
+                                    <div class="metric-value">+72%</div>
+                                </div>
+                                <p>Increase in mobile device conversion rates</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-card">
+                                <div class="metric-header">
+                                    <div class="metric-name">Return Visits</div>
+                                    <div class="metric-value">+65%</div>
+                                </div>
+                                <p>Growth in returning customer rate</p>
+                                <div class="metric-bar">
+                                    <div class="metric-fill" style="width: 82%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="portfolio-cta scroll-element stagger-delay-3">
+                <div class="cta-content glass-container">
+                    <h3 class="cta-title">Ready to Begin Your Mission?</h3>
+                    <p class="cta-subtitle">Let's discuss how our strategic approach can transform your digital presence with precision and measurable results.</p>
+                    <button class="cta-button tactical">
+                        <span class="button-text">INITIATE CONSULTATION</span>
+                        <span class="button-glow"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="services" class="services-section">
+    <h2 class="section-title scroll-element">Strategic Digital Solutions</h2>
+    <p class="section-subtitle scroll-element stagger-delay-1">Comprehensive services designed to elevate your digital presence and drive meaningful business growth</p>
+    
+    <div class="services-grid">
+        <div class="service-item scroll-element">
+            <div class="service-icon">UI/UX</div>
+            <h3>Experience Architecture</h3>
+            <p>Crafting intuitive digital experiences that users love to engage with and that drive measurable business outcomes.</p>
+            <ul class="service-features">
+                <li>User Research & Behavioral Analysis</li>
+                <li>Strategic Wireframing & Prototyping</li>
+                <li>Premium Visual Design Systems</li>
+                <li>Advanced Interaction Design</li>
+            </ul>
+        </div>
+        
+        <div class="service-item scroll-element stagger-delay-1">
+            <div class="service-icon">DEV</div>
+            <h3>Technical Engineering</h3>
+            <p>Building high-performance, scalable digital solutions with cutting-edge technologies and architectural excellence.</p>
+            <ul class="service-features">
+                <li>Advanced Frontend Engineering</li>
+                <li>Robust Backend Architecture</li>
+                <li>Enterprise E-commerce Solutions</li>
+                <li>Performance & Security Optimization</li>
+            </ul>
+        </div>
+        
+        <div class="service-item scroll-element stagger-delay-2">
+            <div class="service-icon">Brand</div>
+            <h3>Digital Brand Strategy</h3>
+            <p>Developing cohesive brand ecosystems that resonate deeply with your audience and drive long-term loyalty.</p>
+            <ul class="service-features">
+                <li>Strategic Brand Positioning</li>
+                <li>Premium Visual Identity Systems</li>
+                <li>Content & Messaging Strategy</li>
+                <li>Integrated Digital Presence</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="services-cta scroll-element stagger-delay-3">
+        <h3>Ready to Transform Your Digital Trajectory?</h3>
+        <p>Let's discuss how our strategic approach can elevate your brand and drive measurable business growth through exceptional digital experiences.</p>
+        <button class="cta-button">Begin Your Transformation</button>
+    </div>
+</section>
+        
+        <section id="manifest" class="manifest-section">
+    <h2 class="section-title scroll-element">Our Design Philosophy</h2>
+    <p class="section-subtitle scroll-element stagger-delay-1">The principles that guide our work and define our commitment to digital excellence</p>
+    
+    <div class="manifest-form scroll-element">
+        <div class="microcopy">Initiate Your Project</div>
+        
+        <div class="form-grid">
+            <input type="text" class="form-field scroll-element" placeholder="Your Name">
+            <input type="email" class="form-field scroll-element stagger-delay-1" placeholder="Email Address">
+            <input type="text" class="form-field scroll-element stagger-delay-2" placeholder="Company">
+            <input type="text" class="form-field scroll-element stagger-delay-3" placeholder="Project Scope">
+        </div>
+        
+        <textarea class="form-field textarea-field scroll-element" placeholder="Tell us about your vision and objectives..."></textarea>
+        
+        <div class="form-additional scroll-element stagger-delay-1">
+            <h4>Areas of Focus</h4>
+            <div class="project-types">
+                <label class="project-type">
+                    <input type="checkbox" name="project-type">
+                    <span>Digital Experience Design</span>
+                </label>
+                <label class="project-type">
+                    <input type="checkbox" name="project-type">
+                    <span>Brand Strategy & Identity</span>
+                </label>
+                <label class="project-type">
+                    <input type="checkbox" name="project-type">
+                    <span>E-commerce Solutions</span>
+                </label>
+                <label class="project-type">
+                    <input type="checkbox" name="project-type">
+                    <span>Web Application Development</span>
+                </label>
+            </div>
+        </div>
+        
+        <button class="submit-button scroll-element stagger-delay-2">Schedule Strategic Consultation</button>
+    </div>
+    
+      <div class="manifest-principles scroll-element stagger-delay-3">
+        <h3>Our Core Principles</h3>
+        <div class="principles-grid">
+            <div class="principle scroll-element">
+                <div class="principle-icon">①</div>
+                <h4>Clarity Through Simplicity</h4>
+                <p>We transform complexity into elegant simplicity, creating solutions that are intuitive, accessible, and profoundly effective.</p>
+            </div>
+            <div class="principle scroll-element stagger-delay-1">
+                <div class="principle-icon">②</div>
+                <h4>Purpose-Driven Design</h4>
+                <p>Every element serves a strategic purpose. We eliminate the unnecessary to amplify what truly matters to your business and users.</p>
+            </div>
+            <div class="principle scroll-element stagger-delay-2">
+                <div class="principle-icon">③</div>
+                <h4>Continuous Innovation</h4>
+                <p>We remain at the forefront of technology and design evolution, ensuring your digital presence is always ahead of the curve.</p>
+            </div>
+        </div>
+    </div>
+</section>
+        
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Minimal Studio. Crafted with precision and purpose.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chroma-js/2.1.0/chroma.min.js"></script>
+    <script src="main.js"></script>
+    <script src="image-loader.js"></script>
+        <script src="premium-grid.js"></script>
+    <script src="three-scene.js"></script>
+    <script>
+  // Updated Three.js initialization with new colors
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize main hologram only
+            initMainHologram();
+            
+            // Initialize background scene
+            initBackgroundScene();
+        });
+
+        function initBackgroundScene() {
+            try {
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+                const renderer = new THREE.WebGLRenderer({ 
+                    alpha: true, 
+                    antialias: true,
+                    powerPreference: "high-performance"
+                });
+                
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                renderer.setClearColor(0x000000, 0);
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                
+                renderer.domElement.style.position = 'fixed';
+                renderer.domElement.style.top = '0';
+                renderer.domElement.style.left = '0';
+                renderer.domElement.style.zIndex = '-2';
+                renderer.domElement.style.pointerEvents = 'none';
+                
+                document.body.appendChild(renderer.domElement);
+                
+                // Updated colors
+                const geometry = new THREE.IcosahedronGeometry(2, 1);
+                const material = new THREE.MeshBasicMaterial({ 
+                    color: 0xd9b08c, // Using accent-gold
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.6
+                });
+                
+                const mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
+                
+                camera.position.z = 5;
+                
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
+                scene.add(ambientLight);
+                
+                const directionalLight = new THREE.DirectionalLight(0xffcb9a, 0.8); // Using accent-warm
+                directionalLight.position.set(1, 1, 1);
+                scene.add(directionalLight);
+                
+                function animate() {
+                    requestAnimationFrame(animate);
+                    
+                    mesh.rotation.x += 0.005;
+                    mesh.rotation.y += 0.008;
+                    
+                    renderer.render(scene, camera);
+                }
+                
+                animate();
+                
+                window.addEventListener('resize', function() {
+                    camera.aspect = window.innerWidth / window.innerHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(window.innerWidth, window.innerHeight);
+                });
+                
+            } catch (error) {
+                console.error('Error initializing background Three.js scene:', error);
+            }
+        }
+
+        function initMainHologram() {
+            try {
+                const container = document.getElementById('hologram-container');
+                if (!container) {
+                    console.warn('Hologram container not found');
+                    return;
+                }
+                
+                container.innerHTML = '';
+                
+                const scene = new THREE.Scene();
+                const camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
+                camera.position.z = 4;
+                
+                const renderer = new THREE.WebGLRenderer({ 
+                    alpha: true,
+                    antialias: true,
+                    powerPreference: "high-performance"
+                });
+                renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+                renderer.setSize(300, 300);
+                renderer.setClearColor(0x000000, 0);
+                
+                renderer.domElement.style.opacity = '0.7';
+                renderer.domElement.style.visibility = 'visible';
+                renderer.domElement.style.display = 'block';
+                
+                container.appendChild(renderer.domElement);
+                
+                const geometry = new THREE.IcosahedronGeometry(1.2, 2);
+                
+                // Updated colors
+                const material = new THREE.MeshBasicMaterial({ 
+                    color: 0xffcb9a, // Using accent-warm
+                    transparent: true,
+                    opacity: 0.9,
+                    wireframe: true,
+                    wireframeLinewidth: 2
+                });
+                
+                const mainMesh = new THREE.Mesh(geometry, material);
+                scene.add(mainMesh);
+                
+                const ambientLight = new THREE.AmbientLight(0x404040, 0.8);
+                scene.add(ambientLight);
+                
+                const directionalLight = new THREE.DirectionalLight(0xd9b08c, 1.2); // Using accent-gold
+                directionalLight.position.set(5, 5, 5);
+                scene.add(directionalLight);
+                
+                function animate() {
+                    requestAnimationFrame(animate);
+                    
+                    mainMesh.rotation.x += 0.01;
+                    mainMesh.rotation.y += 0.015;
+                    
+                    renderer.render(scene, camera);
+                }
+                
+                animate();
+                
+            } catch (error) {
+                console.error('Error initializing main hologram:', error);
+            }
+        }
+</script>
+</body>
+</html>
